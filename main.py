@@ -1,7 +1,7 @@
 import random
 import zipfile
 
-num_of_characters = 10000 #Задаем количество символов
+num_of_characters = 5000 #Задаем количество символов
 
 def gen_sequence_level_one(chars, length=1000):
     result = ""
@@ -30,13 +30,12 @@ def gen_sequence_level_two(chars, length=1000):
             counter_symbols += 1
             if counter_symbols >= length:
                 break
-            result += " "
-
+        result += " "
         counter_symbols += 1
     return result
 
 
-tasks = [
+'''tasks = [
     ("ваол", "seq1_level_one.txt", "seq1_level_two.txt"),
     ("ыдфж", "seq2_level_one.txt", "seq2_level_two.txt"),
     ("прен", "seq3_level_one.txt", "seq3_level_two.txt"),
@@ -46,7 +45,9 @@ tasks = [
     ("сбчю", "seq7_level_one.txt", "seq7_level_two.txt"),
     ("я.э\\", "seq8_level_one.txt", "seq8_level_two.txt"),
     ("ёх-ъ", "seq9_level_one.txt", "seq9_level_two.txt")
-]
+]'''
+
+tasks = [("фываолдж", "seq1_level_one.txt", "seq1_level_two.txt")]
 
 # создаём текстовые файлы
 for chars, fname_level_one, fname_level_two  in tasks:
